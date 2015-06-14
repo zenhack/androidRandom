@@ -1,5 +1,2 @@
-/.idea/workspace.xml
-/out
-/local.properties
-/gen
-
+/build
+/.gradle
