@@ -14,7 +14,7 @@ have inkscape installed an in your $PATH, then run:
 
     ./make-icons.sh
 
-The build system is otherwise just the stock gradle android template.
+The build system is otherwise just the stock scala android sbt template.
 
 # License
 

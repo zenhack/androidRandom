@@ -1,4 +1,5 @@
-/build
-/.gradle
-/.idea
+target/
+project/project
+bin/
+local.properties
 *.png
