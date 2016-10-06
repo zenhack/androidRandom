@@ -18,7 +18,7 @@
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:ems="10"
+                android:ems="@integer/left"
                 android:id="@+id/left" android:layout_weight="1" android:focusable="true" android:hint="1"
                 android:selectAllOnFocus="true"/>
         <TextView
@@ -31,7 +31,7 @@
                 android:layout_width="94dp"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:ems="10"
+                android:ems="@integer/right"
                 android:id="@+id/right" android:layout_gravity="center_horizontal" android:layout_weight="1"
                 android:hint="10"
                 android:selectAllOnFocus="true"/>

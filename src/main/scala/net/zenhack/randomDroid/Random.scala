@@ -8,6 +8,8 @@ import android.widget.{EditText, TextView}
 class Random extends Activity with TypedFindView {
     private var randGen: java.util.Random = new java.util.Random
 
+    implicit val context = this
+
     override def onCreate(savedInstanceState: Bundle): Unit = {
         super.onCreate(savedInstanceState)
         TypedViewHolder.setContentView(this, TR.layout.main)
@@ -23,6 +25,9 @@ class Random extends Activity with TypedFindView {
       randGen.nextInt(Math.abs(left - right) + 1) + Math.min(left, right)
 
     def generate(view: View): Unit = findView(TR.answer).setText(
-        choose(orElse(TR.left, 1), orElse(TR.right, 10)).toString()
+        choose(
+          orElse(TR.left, TR.integer.left.value),
+          orElse(TR.right,TR.integer.right.value)
+        ).toString()
       )
 }
