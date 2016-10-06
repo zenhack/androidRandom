@@ -10,7 +10,7 @@ a number in the given range.
 # Building
 
 Icons are generated from an svg (`assets/ic_launcher.svg`). You need to
-have inkscape installed an in your $PATH, then run:
+have inkscape installed and in your $PATH, then run:
 
     ./make-icons.sh
 
