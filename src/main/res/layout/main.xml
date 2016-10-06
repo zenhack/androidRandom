@@ -12,8 +12,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="random("
-                android:id="@+id/textView"/>
+                android:text="random(" />
         <EditText
                 android:layout_width="98dp"
                 android:layout_height="wrap_content"
@@ -25,8 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=","
-                android:id="@+id/textView2"/>
+                android:text="," />
         <EditText
                 android:layout_width="94dp"
                 android:layout_height="wrap_content"
@@ -39,8 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=")"
-                android:id="@+id/textView3"/>
+                android:text=")" />
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
@@ -51,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="=> "
-                android:id="@+id/textView4" android:layout_gravity="center_horizontal"/>
+                android:layout_gravity="center_horizontal"/>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Generate!"
-            android:id="@+id/generateBtn" android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
             android:onClick="generate"/>
 </LinearLayout>
 
