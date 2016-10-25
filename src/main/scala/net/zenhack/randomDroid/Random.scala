@@ -6,8 +6,6 @@ import android.view.View
 import android.widget.{EditText, TextView}
 
 class Random extends Activity with TypedFindView {
-    private var randGen: java.util.Random = new java.util.Random
-
     implicit val context = this
 
     override def onCreate(savedInstanceState: Bundle): Unit = {
@@ -15,14 +13,17 @@ class Random extends Activity with TypedFindView {
         TypedViewHolder.setContentView(this, TR.layout.main)
     }
 
-    private def orElse(res: TypedResource[EditText], default: Int): Int =
+    private def orElse(res: TypedResource[EditText], default: BigInt): BigInt =
       findView(res).getText().toString() match {
         case "" => default
-        case intStr => Integer.parseInt(intStr)
+        case intStr => BigInt(intStr)
       }
 
-    private def choose(left: Int, right: Int): Int =
-      randGen.nextInt(Math.abs(left - right) + 1) + Math.min(left, right)
+    private def choose(left: BigInt, right: BigInt): BigInt = {
+      // TODO: verify and document that this gives the right distribution.
+      val range = (left - right).abs
+      (BigInt(range.bitLength, scala.util.Random) % range) + (left min right)
+    }
 
     def generate(view: View): Unit = findView(TR.answer).setText(
         choose(
